@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>每日专题--线程与进程（二）-线程安全 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="线程安全定义： 当多个线程访问某个类时，不管运行时环境采用何种调度方式或者这些线程将如何交替执行，并且在主调代码中不需要任何额外的同步或协同，这个类都能表现出正确的行为，那么就称这个类是线程安全的。即：多个线程访问同一变量或者对象时，每次都能够保证结果是正确的。 线程安全——原子性原子性，提供了互斥访问，即同一时刻只能有一个线程对它进行操作。  锁机制-synchronizedsynchroniz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日专题--线程与进程（二）-线程安全">
+<meta property="og:url" content="http://yoursite.com/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="线程安全定义： 当多个线程访问某个类时，不管运行时环境采用何种调度方式或者这些线程将如何交替执行，并且在主调代码中不需要任何额外的同步或协同，这个类都能表现出正确的行为，那么就称这个类是线程安全的。即：多个线程访问同一变量或者对象时，每次都能够保证结果是正确的。 线程安全——原子性原子性，提供了互斥访问，即同一时刻只能有一个线程对它进行操作。  锁机制-synchronizedsynchroniz">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="en-resource://database/1014:0">
+<meta property="og:image" content="en-resource://database/1016:0">
+<meta property="article:published_time" content="2020-03-06T09:38:43.000Z">
+<meta property="article:modified_time" content="2020-03-06T09:40:58.996Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="en-resource://database/1014:0">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-每日专题-线程与进程（二）-线程安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-每日专题-线程与进程（二）-线程安全" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/">每日专题--线程与进程（二）-线程安全</a>
+    <h1 class="article-title" itemprop="name">
+      每日专题--线程与进程（二）-线程安全
     </h1>
   
 
@@ -190,6 +195,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -197,16 +223,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">每日专题--线程与进程（一）-基本概念</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -226,347 +311,14 @@
 
 
 
-
   
-    <article id="post-每日专题-线程与进程（一）-基本概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">每日专题--线程与进程（一）-基本概念</a>
-    </h1>
   
 
-        
-        <a href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-03-05T14:31:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、线程与进程"><a href="#1、线程与进程" class="headerlink" title="1、线程与进程"></a>1、线程与进程</h3><h5 id="1、进程"><a href="#1、进程" class="headerlink" title="1、进程"></a>1、进程</h5><p>进程是指运行中的运用程序，每个进程都有自己<strong>独立的内存空间</strong>（也称进程空间或虚空间）。进程是操作系统控制的基本单元。比如正在运行的某个程序就成为进程。</p>
-<h5 id="2、线程"><a href="#2、线程" class="headerlink" title="2、线程"></a>2、线程</h5><p>线程就是进程中的一个执行流程，是进程中的一个实体，是被系统独立调度和分派的基本单位。线程没有独立的系统资源（空间），但它可以与同属一个进程的其他线程共享进程所拥有的全部资源。一个进程可以有多个线程，同一个进程的多线程之间可以并发执行。</p>
-<p><strong>线程的特点</strong></p>
-<ul>
-<li>线程是轻量级的进程</li>
-<li>线程没有独立的地址空间</li>
-<li>线程是由进程创建的</li>
-<li>一个线程可以拥有多个线程（即我们常说的多线程）</li>
-</ul>
-<h3 id="2、线程的创建"><a href="#2、线程的创建" class="headerlink" title="2、线程的创建"></a>2、线程的创建</h3><h5 id="1、线程的几种状态"><a href="#1、线程的几种状态" class="headerlink" title="1、线程的几种状态"></a>1、线程的几种状态</h5><ul>
-<li>新建状态（new）：创建一个线程对象。</li>
-<li>就绪状态（Runnable）：该状态的线程位于可运行线程池中，变得可运行，等待获取cpu使用权限。</li>
-<li>运行状态（Running）：就绪状态的线程获得cpu，执行程序代码。</li>
-<li>阻塞状态（Blocked）：线程因某种原因放弃了cpu的使用权，暂时停止与逆行，直到进入<strong>就绪状态</strong> ，才有机会转到运行状态。<br>阻塞情况一般分为三种：</li>
-<li><em>1、等待阻塞：*</em> 运行的线程执行了wait()方法，jvm会把该线程放入等待池中，直到notify()或notifyAll()，线程被唤醒之后释放同步锁回到可运行状态。</li>
-<li><em>2、同步阻塞：*</em> 运行的线程在获取对象的同步锁（Synchronized）时，若该同步锁被其他线程占用，则jvm会把该线程放入所池。</li>
-<li><em>3、其他阻塞：*</em> 运行的线程执行sleep()方法或join()方法，或者发出了I/O请求时，jvm会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或超时、i/o处理完毕，线程重新转入就绪状态。</li>
-<li>死亡状态（Dead）：线程执行完毕或因异常退出。</li>
-</ul>
-<h5 id="2、线程的创建-1"><a href="#2、线程的创建-1" class="headerlink" title="2、线程的创建"></a>2、线程的创建</h5><ol>
-<li>继承Thraed类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;继承thread类</span><br><span class="line">class ThreadA extends Thread&#123;</span><br><span class="line">    private int j;</span><br><span class="line">    public ThreadA(int num) &#123;</span><br><span class="line">        j&#x3D;num;</span><br><span class="line">        System.out.println(&quot;创建线程&quot;+j);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;实现run方法</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        for(int i&#x3D;1;i&lt;3;i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                sleep((int)(1000*Math.random()));</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            catch(InterruptedException e)&#123; &#125;</span><br><span class="line">            System.out.println(&quot;线程&quot;+j+&quot;:计数&quot;+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public class ByThread&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ThreadA a1&#x3D;new ThreadA(1);</span><br><span class="line">        ThreadA a2&#x3D;new ThreadA(2);</span><br><span class="line">        ThreadA a3&#x3D;new ThreadA(3);</span><br><span class="line">        a1.start();</span><br><span class="line">        a2.start();</span><br><span class="line">        a3.start();</span><br><span class="line">        System.out.println(&quot;主方法main()运行结束！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-运行结果：<br><img src="en-resource://database/1010:0" alt="549ad918da990deb4e951eeb78581f35.png"></li>
-</ol>
-<p><strong>要注意运行结果顺序。</strong><br>2. 实现runnable接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package multithread;</span><br><span class="line">class ThreadB implements Runnable&#123;</span><br><span class="line">    private int j;</span><br><span class="line">    public ThreadB(int num) &#123;</span><br><span class="line">        j&#x3D;num;</span><br><span class="line">        System.out.println(&quot;创建线程&quot;+j);</span><br><span class="line">    &#125;</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        for(int i&#x3D;1;i&lt;3;i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                Thread.sleep((int)(1000*Math.random()));</span><br><span class="line">            &#125;</span><br><span class="line">            catch(InterruptedException e)&#123; &#125;</span><br><span class="line">            System.out.println(&quot;线程&quot;+j+&quot;:计数&quot;+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class ByRunnable&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ThreadA a1&#x3D;new ThreadA(1);</span><br><span class="line">        ThreadA a2&#x3D;new ThreadA(2);</span><br><span class="line">        ThreadA a3&#x3D;new ThreadA(3);</span><br><span class="line">        a1.start();</span><br><span class="line">        a2.start();</span><br><span class="line">        a3.start();</span><br><span class="line">        System.out.println(&quot;主方法main()运行结束！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>两种实现方式的区别</li>
-</ol>
-<p><strong>继承Thread类</strong></p>
-<ul>
-<li>编写简单，可直接操作线程</li>
-<li>适用于单继承</li>
-<li><em>实现runnable接口*</em></li>
-<li>避免单继承局限，扩展性更好</li>
-<li>便于资源共享</li>
-</ul>
-<h5 id="3、多线程"><a href="#3、多线程" class="headerlink" title="3、多线程"></a>3、多线程</h5><p>多线程是指多个线程同时运行或交替运行（取决于cpu，如果cpu是单核的话是交易运行，多核的话可以在多个cpu中同时运行）<br>多线程是开发高并发系统的基础，利用好多线程机制可以大大提高系统整体的并发能力以及性能。</p>
-<p><strong>多线程分类</strong></p>
-<ul>
-<li>用户线程：运行在前台，执行具体任务。例如程序的主线程、连接网络的子线程等。</li>
-<li>守护线程：运行在后台，为前台线程服务。当所有用户线程都结束，守护线程会随jvm一起结束工作。最常见的守护线程就是垃圾回收线程。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-个人博客搭建——基于HEXO框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8EHEXO%E6%A1%86%E6%9E%B6/">个人博客搭建——基于HEXO框架</a>
-    </h1>
   
 
-        
-        <a href="/2020/02/18/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8EHEXO%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-02-18T14:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>在进行搭建博客之前，我们先要来进行配置。</p>
-<ol>
-<li>node.js准备——直接去<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js</a>官网下载安装，下载过程中一路next就好了。</li>
-<li>git准备<br> 首先同样的到<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>官网下载安装，安装过程与node.js无异。接下来要进行git配置：<br> 打开git cmd(刚刚下载过的，找到它），输入：<blockquote>
-<p>git init ——对git进行初始化。<br>配置初始信息——用户名和邮箱<br>git config –global user.name “yourname”<br>git config –global user.email “youremail”<br>进行一些常用配置<br>git config –global core.autocrlf false<br>git config –global gui.enconding utf-8<br>git config –global core.quotepath off<br>  配置公钥私钥，<br>ssh-keygen -t rsa -C “youremail”<br>这个命令会在user/.ssh目录生成id_rsa.pub文件，用nodepad++打开进行复制<br>  然后在GitHub中点击setting，找到SSH and GPG keys，点击新建，将其复制过去，就可以啦！</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20200219083050981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200219083110931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>说明：作者使用win10进行操作，但Up主用的是mac系统，但命令基本一样，下面描述均是基于win10.</p>
-<p> 在win10中，我们直接打开的cmd进行以下操作：</p>
-<ol>
-<li>通过<code>node -v</code>查看node版本。</li>
-<li>安装cnpm<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
-<li>安装hexo<code>cnpm install -g hexo-cli</code></li>
-<li>查看hexo是否安装成功及版本<code>hexo-v</code></li>
-<li>通过mkdir命令建一个文件夹，下面操作基于这个文件夹（也可以直接创建，然后cd进如文件内）</li>
-<li>对hexo进行初始化<code>hexo inti</code></li>
-<li>启动hexo<code>hexo s</code>，至此，你可以通过localhost:4000访问一个刚搭建好的博客页面。</li>
-<li>如果新创建一个博客，则只需要输入<code>hexo n &quot;博客名&quot;</code>，就会在刚刚建立的文件夹下的/source/_posts找到相应的文件，用nodepad++打开就可以使用markdown编辑你的第一篇博客啦！</li>
-<li>编辑完成保存后，使用<code>hexo g</code>生成相应的html文件，这时候再用localhost:4000访问就可以看到刚刚新建的博客了。</li>
-</ol>
-<p>到这一步，一个基础的博客就搭建好啦！下面我们要对它进行部署。</p>
-<h2 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h2><p>我目前采用的是和up主一样的部署到github上，这样的话不需要购买服务器。但是访问有点慢，后续会尝试用其他方式部署。<br>下面用文字描述如何部署：</p>
-<ol>
-<li>到你的GitHub上新建一个仓库，命名格式一定要是：<strong>用户名.github.io</strong>，这个也将作为后续进行访问博客的地址。<br><img src="https://img-blog.csdnimg.cn/20200219085345808.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200219085356152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>安装git插件<code>cnpm install --save hexo-deployer-git</code></li>
-<li>在刚刚的目录下找到_config.yml文件，最末尾的type加上“git”,同时加上repo:github仓库地址<br><img src="https://img-blog.csdnimg.cn/20200219085933977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">    </li>
-<li>输入<code>hexo d</code>即可自动部署</li>
-<li>至此，你可以通过<a href="https://GitHub用户名.github,io访问你的博客" target="_blank" rel="noopener">https://GitHub用户名.github,io访问你的博客</a></li>
-</ol>
-<h2 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h2><p>下面，你可以根据自己的喜好去github上找一个合适的主题应用到你的博客中，如果你是前端爱好者，也可以尝试自己写一个主题。<br>接下来以yilia主题为例来进行应用。<br>首先在github上找到相应的主题，将它的地址copy下来。<br><img src="https://img-blog.csdnimg.cn/20200219090529255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"> 然后输入<code>git clone https://github地址 themes/主题名字</code>,拉取完毕之后你可以在你的建立博客的目录下 themes/主题名字 找到克隆的内容。<br>最后进入_config.yml文件，修改主题即可。<br><img src="https://img-blog.csdnimg.cn/20200219090925765.png" alt="在这里插入图片描述"><br>ok,一个基本的博客就搭建完成啦！就像Up主codesheep所说的，我们先将它搭建好玩起来，再去慢慢的改善它！希望大家都可以愉快的玩耍！<br>在这里私心放一下自己的<a href="https://cmt1119.github.io/" target="_blank" rel="noopener">博客链接</a>，也是昨天刚搭建好的，后面有时间会好好完善！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/18/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8EHEXO%E6%A1%86%E6%9E%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
   
 
-        
-        <a href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-18T06:39:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/18/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-18T06:29:57.418Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/18/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -589,8 +341,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
