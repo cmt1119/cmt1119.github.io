@@ -152,6 +152,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-每日专题-线程常用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/07/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">每日专题--线程常用方法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/07/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-03-07T09:13:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、线程启动与执行"><a href="#1、线程启动与执行" class="headerlink" title="1、线程启动与执行"></a>1、线程启动与执行</h3><p>1、<strong>start()：</strong> 启动线程并执行相应的run()方法。</p>
+<ul>
+<li>调用该方法会创建一个新的线程，而这个新的线程会执行Thread类中的run()方法。</li>
+<li>一个线程不能重复start()</li>
+<li>用start()来启动线程，实现了真正意义上的启动线程，此时会出现异步执行的效果。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package multithread;</span><br><span class="line">class ThreadA extends Thread&#123;</span><br><span class="line">    private int j;</span><br><span class="line">    public ThreadA(int num) &#123;</span><br><span class="line">        j&#x3D;num;</span><br><span class="line">        System.out.println(&quot;创建线程&quot;+j);</span><br><span class="line">    &#125;</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        for(int i&#x3D;1;i&lt;3;i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                sleep((int)(1000*Math.random()));</span><br><span class="line">            &#125;</span><br><span class="line">            catch(InterruptedException e)&#123; &#125;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+&quot;:计数&quot;+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public class ByRun&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ThreadA a1&#x3D;new ThreadA(1);</span><br><span class="line">        ThreadA a2&#x3D;new ThreadA(2);</span><br><span class="line">        ThreadA a3&#x3D;new ThreadA(3);</span><br><span class="line">        a1.start();</span><br><span class="line">        a2.start();</span><br><span class="line">        a3.start();</span><br><span class="line">        System.out.println(&quot;主方法main()运行结束！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="en-resource://database/1020:1" alt="46c49e0be5cf427e6dc49defb2129a8b.png"></li>
+</ul>
+<p>2、<strong>run():</strong> 子线程要执行的代码放入run()方法。</p>
+<ul>
+<li>调用此方法不会创建新的线程，而实直接在当前线程执行该方法。</li>
+<li>用run()方法来启动线程，是同步执行，不会达到使用线程的意义。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package multithread;</span><br><span class="line">class ThreadA extends Thread&#123;</span><br><span class="line">    private int j;</span><br><span class="line">    public ThreadA(int num) &#123;</span><br><span class="line">        j&#x3D;num;</span><br><span class="line">        System.out.println(&quot;创建线程&quot;+j);</span><br><span class="line">    &#125;</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        for(int i&#x3D;1;i&lt;3;i++) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                sleep((int)(1000*Math.random()));</span><br><span class="line">            &#125;</span><br><span class="line">            catch(InterruptedException e)&#123; &#125;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+&quot;:计数&quot;+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public class ByRun&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        ThreadA a1&#x3D;new ThreadA(1);</span><br><span class="line">        ThreadA a2&#x3D;new ThreadA(2);</span><br><span class="line">        ThreadA a3&#x3D;new ThreadA(3);</span><br><span class="line">        a1.run();</span><br><span class="line">        a2.run();</span><br><span class="line">        a3.run();</span><br><span class="line">        System.out.println(&quot;主方法main()运行结束！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="en-resource://database/1022:1" alt="f1aaeccd979defff89649c9ea876591f.png"></li>
+</ul>
+<h3 id="2、获取当前线程"><a href="#2、获取当前线程" class="headerlink" title="2、获取当前线程"></a>2、获取当前线程</h3><p>1、<strong>Thread.currentThread():</strong> 获取当前线程。<br>2、<strong>Thread.currentThread().getName():</strong> 获取当前线程的名字。<br>3、<strong>Thread.currentThread().getId():</strong> 获取当前线程唯一标识。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(Thread.currentThread().getName());</span><br></pre></td></tr></table></figure>
+<h3 id="3、线程休眠"><a href="#3、线程休眠" class="headerlink" title="3、线程休眠"></a>3、线程休眠</h3><p><strong>线程休眠：</strong> 线程休眠是指让当前线程暂缓执行，等到规定休眠时间之后再恢复执行。线程休眠时会<strong>立即交出</strong>CPU，但不会释放锁。<br>线程休眠方法：<strong>sleep()</strong></p>
+<ul>
+<li>sleep()流程：运行状态–&gt;sleep()–&gt;阻塞状态–&gt;sleep()结束–&gt;就绪状态–&gt;系统调度–&gt;运行状态。</li>
+<li>由于线程处于就绪状态时，等待系统调度的时间是随机的，所以每次sleep()的时间是有差异的。</li>
+<li>sleep()会抛出InterruptedException异常，需要进行异常处理。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">        sleep((int)(1000*Math.random()));</span><br><span class="line">    &#125;</span><br><span class="line">        catch(InterruptedException e)&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4、线程让步"><a href="#4、线程让步" class="headerlink" title="4、线程让步"></a>4、线程让步</h3><p><strong>线程让步：</strong> 线程让步是指暂停执行当前的线程对象，并执行其他线程。线程让步会交出当前CPU,<strong>但不一定立即交出</strong>。不会释放锁。<br>线程让步方法：<strong>yield()</strong></p>
+<ul>
+<li>yield()方法无法控制具体交出CPU的时间，也无法保证其他线程一定获得CPU</li>
+<li>yield()方法只能让拥有相同优先级的线程有获取CPU的机会。</li>
+</ul>
+<h3 id="5、join-方法"><a href="#5、join-方法" class="headerlink" title="5、join()方法"></a>5、join()方法</h3><p><strong>join():</strong> t.join方法会使主线程（当前运行的线程）进入等待状态等待t线程执行完毕之后才会被唤醒。</p>
+<ul>
+<li>join()流程：运行状态–&gt;join()–&gt;阻塞状态–&gt;join()中断–&gt;就绪状态–&gt;系统调度–&gt;运行状态。</li>
+<li>join()会抛出InterruptedException异常，需要进行异常处理。</li>
+</ul>
+<h3 id="6、wait-和notify-方法"><a href="#6、wait-和notify-方法" class="headerlink" title="6、wait()和notify()方法"></a>6、wait()和notify()方法</h3><p><strong>wait():</strong> 等待，如果线程执行了wait()方法，那么该线程会进入等待状态，等待状态下的线程必须要被其他线程调用notify()才能唤醒。<br><strong>notify():</strong> 唤醒，唤醒线程池等待线程的其中一个。<br><strong>notify():</strong> 唤醒线程池的所有等待线程。<br><strong>注意：</strong></p>
+<ul>
+<li>wait()方法和notify()方法必须要在同步代码块或同步函数中才能使用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">class Common&#123;</span><br><span class="line">    private char ch;</span><br><span class="line">    &#x2F;&#x2F;是否有商品</span><br><span class="line">    private boolean available&#x3D;false;</span><br><span class="line">    &#x2F;&#x2F;消费者获取商品方法</span><br><span class="line">    synchronized char get() &#123;</span><br><span class="line">        while(available&#x3D;&#x3D;false) &#123;</span><br><span class="line">            &#x2F;&#x2F;如果没有商品，则消费者先等待</span><br><span class="line">            try &#123; wait(); &#125;</span><br><span class="line">            catch(InterruptedException e) &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        available&#x3D;false;</span><br><span class="line">        &#x2F;&#x2F;唤醒消费者去消费</span><br><span class="line">        notify();</span><br><span class="line">        return ch;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;生产者生产商品方法</span><br><span class="line">    synchronized void put (char newch) &#123;</span><br><span class="line">        while(available&#x3D;&#x3D;true) &#123;</span><br><span class="line">            &#x2F;&#x2F;有商品时生产者等待消费者去消费</span><br><span class="line">            try &#123; wait(); &#125;</span><br><span class="line">            catch(InterruptedException e) &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ch&#x3D;newch;</span><br><span class="line">        available&#x3D;true;</span><br><span class="line">        &#x2F;&#x2F;唤醒生产者去生产</span><br><span class="line">        notify();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Producer extends Thread&#123;</span><br><span class="line">    private Common comm;</span><br><span class="line">    public Producer(Common thiscomm) &#123;</span><br><span class="line">        comm&#x3D;thiscomm;</span><br><span class="line">    &#125;</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        char x;</span><br><span class="line">        for(x&#x3D;&#39;a&#39;;x&lt;&#x3D;&#39;e&#39;;x++) &#123;</span><br><span class="line">            System.out.println(&quot;生产的数据是：&quot;+x);</span><br><span class="line">            comm.put(x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Consumer extends Thread&#123;</span><br><span class="line">    private Common comm;</span><br><span class="line">    public Consumer(Common thiscomm) &#123;</span><br><span class="line">        comm&#x3D;thiscomm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void run() &#123;</span><br><span class="line">        char y;</span><br><span class="line">        for(int i&#x3D;0;i&lt;5;i++) &#123;</span><br><span class="line">            y&#x3D;comm.get();</span><br><span class="line">            System.out.println(&quot;消费者得到的数据是：&quot;+y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Excercise11_5 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Common comm&#x3D;new Common();</span><br><span class="line">        Producer p&#x3D;new Producer(comm);</span><br><span class="line">        Consumer con&#x3D;new Consumer(comm);</span><br><span class="line">        p.start();</span><br><span class="line">        con.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="en-resource://database/1024:0" alt="592bdc3593ea03a369a7f9151d0e2dd9.png"></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/07/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-每日专题-线程与进程（二）-线程安全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
