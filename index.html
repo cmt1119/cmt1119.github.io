@@ -152,6 +152,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-每日专题-Java三大特征-一-继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/">每日专题--Java三大特征(一)继承</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/" class="archive-article-date">
+  	<time datetime="2020-03-09T14:56:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、什么是继承"><a href="#1、什么是继承" class="headerlink" title="1、什么是继承"></a>1、什么是继承</h3><p>继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例对象和方法，或者子类从父类继承方法，使得子类具有父类相同的行为。</p>
+<p>一般来说，子类比超类拥有的功能更加丰富。（子类相当于是对父类的一个扩展和细化）。在通过扩展超类定义子类时，仅需要指出子类与超类的不同之处。</p>
+<p>因此在设计类的时候，应该将通用的方法放到超类中，而将具有特色用途的方法放在子类中。这种将通用的功能放到超类的方法在面向对象程序设计中十分普遍。</p>
+<h3 id="2、继承关键字"><a href="#2、继承关键字" class="headerlink" title="2、继承关键字"></a>2、继承关键字</h3><h4 id="1）-extends"><a href="#1）-extends" class="headerlink" title="1）.extends"></a>1）.extends</h4><p>一个类B继承另一个类A，要用到关键字<strong>extends</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class B extends A&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>表示B类继承了A类，称B是A的子类（派生类、孩子类），A是B的父类（超类、基类）。B会继承A的对象和方法。</p>
+<h4 id="2）-super"><a href="#2）-super" class="headerlink" title="2）.super"></a>2）.super</h4><p>Java用super表示超类的意思。它有两个用途：<br><strong>a)、调用超类对象和方法</strong><br>格式为super.xxx。<br><strong>b)、 调用超类构造器</strong><br>在子类构造方法中使用super()可以调用父类的构造方法。但是即使在子类的构造方法中没有使用super()，Java默认也会在子类构造方法中隐式添加super()，这样是为了构造出完整的对象，所以编译器会强制子类去调用父类的<strong>无参构造方法</strong>。<br>如果父类的无参构造器被声明为private或父类中不存在无参构造器，则必须显式的调用父类的有参构造方法。<br>使用super()调用构造器的语句必须是子类构造器的第一条语句。</p>
+<h3 id="3、重写父类方法"><a href="#3、重写父类方法" class="headerlink" title="3、重写父类方法"></a>3、重写父类方法</h3><p>重写是继承的一大重点。重写是指在子类中重写父类已经有的放啊个，这样在调用该方法的时候会自动调用子类重写过的方法。</p>
+<p><strong>1、</strong> final、private声明的方法无法被重写。即使子类中有一个同名方法，也不是重写，只是方法重名。<br><strong>2、</strong> 添加一个@Override，表示该方法是重写方法。（如果不是重写方法加上这个注解会报错）推荐在重写方法时加上这个注解，养成良好编写习惯。<br><strong>3、</strong> 普通类继承自抽象类时，必须重写抽象类的方法，否则就会报错。而当抽象类继承自抽象类时，可以不重写父类的抽象方法。</p>
+<h3 id="4、继承中的权限修饰"><a href="#4、继承中的权限修饰" class="headerlink" title="4、继承中的权限修饰"></a>4、继承中的权限修饰</h3><p><strong>1）、private</strong><br>父类中声明为private的方法、对象无法被子类调用<br><strong>2）、public&amp;protected</strong><br>在继承关系中，无论子类父类在哪里，都可以访问public/protected声明的成员/方法。</p>
+<p>在重写方法时可以对权限修饰符进行修改，修改原则是<strong>只能从小范围往大范围改</strong>。</p>
+<h3 id="5、继承特性及优缺点"><a href="#5、继承特性及优缺点" class="headerlink" title="5、继承特性及优缺点"></a>5、继承特性及优缺点</h3><p><strong>1）、</strong> Java的（类的）继承是单继承的，不允许一个类继承多个父类。<br><strong>2）、</strong> 新类是现有类的一种类型，继承可以把新类向上转型成基类。<br><strong>3）、</strong> 继承的使用可以实现代码共享，减少创建类的工作量，提高代码的重用性和可扩展性。<br><strong>4）、</strong> 继承是侵入性的，只要继承，就必须拥有父类的所有属性和方法，降低了代码的灵活性，增强了耦合性。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-每日专题-线程常用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
