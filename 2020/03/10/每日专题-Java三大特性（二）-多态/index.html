@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>每日专题--Java三大特性（二）-多态 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="多态1、概述Java中的引用类型有两个：1、编译时类型，即由声明该变量时使用的类型决定。2、运行时类型，即由实际赋给该变量的对象决定。而多态的引用类型是编译时类型。 多态： 指程序中定义的引用变量所指的具体类型和通过改引用变量发出的方法调用在编译时不确定，在程序运行期间才确定。通俗理解就是，同一个接口使用不同的实例执行不同的操作。体现为父类引用变量可以指向子类对象。即：Parent a&#x3D;new S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日专题--Java三大特性（二）-多态">
+<meta property="og:url" content="http://yoursite.com/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="多态1、概述Java中的引用类型有两个：1、编译时类型，即由声明该变量时使用的类型决定。2、运行时类型，即由实际赋给该变量的对象决定。而多态的引用类型是编译时类型。 多态： 指程序中定义的引用变量所指的具体类型和通过改引用变量发出的方法调用在编译时不确定，在程序运行期间才确定。通俗理解就是，同一个接口使用不同的实例执行不同的操作。体现为父类引用变量可以指向子类对象。即：Parent a&#x3D;new S">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-10T15:33:47.000Z">
+<meta property="article:modified_time" content="2020-03-10T15:35:52.156Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,238 +154,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-每日专题-Java三大特性（二）-多态" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      每日专题--Java三大特性（二）-多态
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/" class="archive-article-date">
+
+        
+        <a href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/" class="archive-article-date">
   	<time datetime="2020-03-10T15:33:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/">每日专题--Java三大特性（二）-多态</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h4><p>Java中的引用类型有两个：<br>1、编译时类型，即由声明该变量时使用的类型决定。<br>2、运行时类型，即由实际赋给该变量的对象决定。<br>而多态的引用类型是编译时类型。</p>
+<p><strong>多态：</strong> 指程序中定义的引用变量所指的具体类型和通过改引用变量发出的方法调用在编译时不确定，在程序运行期间才确定。<br>通俗理解就是，同一个接口使用不同的实例执行不同的操作。<br>体现为<strong>父类引用变量可以指向子类对象</strong>。<br>即：<code>Parent a=new Son();</code></p>
+<p><strong>多态存在的前提条件：</strong><br>1、继承<br>2、子类重写父类方法<br>3、父类引用指向子类对象（向上转型）</p>
+<h4 id="2、实现方式及成员特点"><a href="#2、实现方式及成员特点" class="headerlink" title="2、实现方式及成员特点"></a>2、实现方式及成员特点</h4><p><strong>实现方式：</strong><br>1、实现继承并重写父类方法<br>2、实现接口<br>3、抽象和抽象方法</p>
+<p><strong>成员特点：</strong><br>1、多态成员变量：编译运行看左边<br>2、多态成员方法：编译运行看右边</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Parent&#123;</span><br><span class="line">    int num&#x3D;1;</span><br><span class="line">    public void show()&#123;</span><br><span class="line">        System.out.println(&quot;这是父类show&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Son extends Parent&#123;</span><br><span class="line">    int num&#x3D;0;</span><br><span class="line">    public void show()&#123;</span><br><span class="line">        System.out.println(&quot;这是子类show&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Polymorphism&#123;</span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line">        Parent a&#x3D;new Son();</span><br><span class="line">        System.out.println(a.num);</span><br><span class="line">        a.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码运行结果为：</p>
+<p>1<br>这是子类show()</p>
+<h4 id="3、多态的优缺点"><a href="#3、多态的优缺点" class="headerlink" title="3、多态的优缺点"></a>3、多态的优缺点</h4><p><strong>优点：</strong><br>1、消除类型之间的耦合关系（为什么？）<br>2、可替换性<br>3、可扩展</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-03-09T14:56:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">每日专题--Java三大特征(一)继承</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/09/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81-%E4%B8%80-%E7%BB%A7%E6%89%BF/">每日专题--Java三大特征(一)继承</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/07/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-03-07T09:13:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/07/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">每日专题--线程常用方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2020-03-06T09:38:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/06/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/">每日专题--线程与进程（二）-线程安全</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-03-05T14:31:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/05/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">每日专题--线程与进程（一）-基本概念</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8EHEXO%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-02-18T14:38:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8EHEXO%E6%A1%86%E6%9E%B6/">个人博客搭建——基于HEXO框架</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-18T06:39:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/18/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-18T06:29:57.418Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -404,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

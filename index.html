@@ -152,6 +152,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-每日专题-Java三大特性（二）-多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/">每日专题--Java三大特性（二）-多态</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/" class="archive-article-date">
+  	<time datetime="2020-03-10T15:33:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h4><p>Java中的引用类型有两个：<br>1、编译时类型，即由声明该变量时使用的类型决定。<br>2、运行时类型，即由实际赋给该变量的对象决定。<br>而多态的引用类型是编译时类型。</p>
+<p><strong>多态：</strong> 指程序中定义的引用变量所指的具体类型和通过改引用变量发出的方法调用在编译时不确定，在程序运行期间才确定。<br>通俗理解就是，同一个接口使用不同的实例执行不同的操作。<br>体现为<strong>父类引用变量可以指向子类对象</strong>。<br>即：<code>Parent a=new Son();</code></p>
+<p><strong>多态存在的前提条件：</strong><br>1、继承<br>2、子类重写父类方法<br>3、父类引用指向子类对象（向上转型）</p>
+<h4 id="2、实现方式及成员特点"><a href="#2、实现方式及成员特点" class="headerlink" title="2、实现方式及成员特点"></a>2、实现方式及成员特点</h4><p><strong>实现方式：</strong><br>1、实现继承并重写父类方法<br>2、实现接口<br>3、抽象和抽象方法</p>
+<p><strong>成员特点：</strong><br>1、多态成员变量：编译运行看左边<br>2、多态成员方法：编译运行看右边</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Parent&#123;</span><br><span class="line">    int num&#x3D;1;</span><br><span class="line">    public void show()&#123;</span><br><span class="line">        System.out.println(&quot;这是父类show&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Son extends Parent&#123;</span><br><span class="line">    int num&#x3D;0;</span><br><span class="line">    public void show()&#123;</span><br><span class="line">        System.out.println(&quot;这是子类show&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Polymorphism&#123;</span><br><span class="line">    public static void main(String[]args)&#123;</span><br><span class="line">        Parent a&#x3D;new Son();</span><br><span class="line">        System.out.println(a.num);</span><br><span class="line">        a.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码运行结果为：</p>
+<p>1<br>这是子类show()</p>
+<h4 id="3、多态的优缺点"><a href="#3、多态的优缺点" class="headerlink" title="3、多态的优缺点"></a>3、多态的优缺点</h4><p><strong>优点：</strong><br>1、消除类型之间的耦合关系（为什么？）<br>2、可替换性<br>3、可扩展</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/10/%E6%AF%8F%E6%97%A5%E4%B8%93%E9%A2%98-Java%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%EF%BC%88%E4%BA%8C%EF%BC%89-%E5%A4%9A%E6%80%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-每日专题-Java三大特征-一-继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
